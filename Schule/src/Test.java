@@ -8,6 +8,7 @@ public class Test {
 
 		String bla;
 		int blaint = 1;
+		double test2;
 
 	}
 
