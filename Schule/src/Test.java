@@ -5,6 +5,7 @@ public class Test {
 	Test(){
 		
 		System.out.println("bla2");
+		System.out.println("test2");
 		
 	}
 
