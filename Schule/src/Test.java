@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Test {
 	
-	String[][] daten	= new String[24][1];
+	String[][] daten	= new String[7][24];
 	String[] namen		= new String[4];
 	int[] zahlen 		= new int[10];
 	int[] zahl1	 		= new int[5];
@@ -39,9 +39,10 @@ public class Test {
 		Random rnd = new Random();
 		
 		
-		for (int i = 0; i < daten.length; i++){
+		for (int i = 0; i <= 6; i++){
+			for (int j = 0;j <= 23; j++)
 						
-			daten[i][0] = namen[rnd.nextInt(4)];
+			daten[i][j] = namen[rnd.nextInt(4)];
 			
 			
 		}
@@ -50,11 +51,13 @@ public class Test {
 	
 	public void zeigeTemp(){
 		
-		for (int i = 0; i<daten.length; i++){
+		for (int i = 0; i<=6; i++){
+			System.out.println("Tag: " + (i+1) + "---------------------");
+			for (int j = 0; j<=23;j++) {
+
+			System.out.println("Stunde: " + (j+1) + " Prüfer: " + daten[i][j]);
 			
-			System.out.println("Stunde: " + (i+1) + " gemessen von: " + daten[i][0]);
-			
-			
+			}
 		}
 		
 		
