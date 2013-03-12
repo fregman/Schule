@@ -1,9 +1,22 @@
+import java.util.Random;
+
 
 public class Test {
 	
-	int[] zahlen = new int[10];
-	int[] zahl1 = new int[5];
-	int[] zahl2 = new int[5];
+	String[][] daten	= new String[24][1];
+	String[] namen		= new String[4];
+	int[] zahlen 		= new int[10];
+	int[] zahl1	 		= new int[5];
+	int[] zahl2	 		= new int[5];
+
+	Test(){
+		
+		namen[0] = "Peter";
+		namen[1] = "Hans";
+		namen[2] = "Schnitze";
+		namen[3] = "Kunibert";		
+	}
+	
 	
 	
 	
@@ -14,9 +27,36 @@ public class Test {
 		
 		for (int i: zahlen){
 			
+
 			zahlen[i] = i*i;
 			
 		}
+		
+	}
+	
+	public void erzeugeTemp(){
+		
+		Random rnd = new Random();
+		
+		
+		for (int i = 0; i < daten.length; i++){
+						
+			daten[i][0] = namen[rnd.nextInt(4)];
+			
+			
+		}
+		
+	}
+	
+	public void zeigeTemp(){
+		
+		for (int i = 0; i<daten.length; i++){
+			
+			System.out.println("Stunde: " + (i+1) + " gemessen von: " + daten[i][0]);
+			
+			
+		}
+		
 		
 	}
 	
